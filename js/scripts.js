@@ -9,6 +9,11 @@ function Foodfinder(type, location, truck) {
   // this.description = [];
 }
 
+function randomNumberGenerator(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+randomNumberGenerator(0, directory.length);
+
 var grilledCheeseGrill = new Foodfinder("American", "SW 10th & Alder", "Grilled Cheese Grill");
 var smallPharaoh = new Foodfinder("Middle Eastern", "SW 5th & Stark", "Small Pharaoh");
 var laPinataTakos = new Foodfinder("Mexican", "SW 3rd & Ash", "La Pinata Takos");
