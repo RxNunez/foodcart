@@ -8,30 +8,26 @@
     <title>FoodCart</title>
   </head>
   <body>
-    <div class="container" id="header">
-      <div class="row">
-        <div class="col-md-5">
-          <h1><img src="img/logo.png" alt="logo image" id="logo">&nbsp;FOoDCaRtFindEr</h1>
-        </div>
-        <div class="col-md-7" id="contact">
-          <h3>Want your food to be featured?
+    <div class="container" >
+      <div id="header">
+        <h1><img src="img/logo.png" alt="logo image" id="logo">&nbsp;FOoDCaRtFindEr</h1>
+        <h3>Want your food to be featured?
           <button type="button" class="btn-unique" name="button">Contact us</button></h3>
-        </div>
       </div>
-      <div class="row" id="banner">
-        <div class="col-lg-3">
-
+      <div id="banner">
+        <select class="form-control" id="foodType">
+          <option>I'm Hungry</option>
+          <option>American</option>
+          <option>Mexican</option>
+          <option>Asian</option>
+        </select>
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+          </span>
         </div>
-        <div class="col-lg-6" id="search">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Go!</button>
-            </span>
-          </div>
-        </div>
-      </div>
+      <div>
       <button type="button" name="button" class="btn-success btn-lg" id="check-list">Check our list</button>
+    </div>
     </div>
   </body>
 </html>
