@@ -22,28 +22,38 @@ body {
   color: white;
   background-color: black;
 }
- /*#check-list {
+
+ #check-list {
   position:absolute;
   bottom:15px;
   right: 3%;
-}*/
+}
 
 html {
+  color: white;
   background-image: url('../img/background.jpg');
   background-size: 100%;
   background-position-x: center;
   background-position-y: center;
-  padding-top:5px;
   background-size:cover;
   background-repeat: no-repeat;
   height: 100%;
 }
-#banner{
-  background: transparent;
-  background-position-x: center;
-  background-position-y: center;
 
+#banner{
+  position:absolute;
+  top: 50%;
+  left: 25%;
+  right: 25%;
 }
+
 .container{
     width: 100%
+}
+
+.go{
+  position:absolute;
+  top: 50%;
+  left: 75%;
+  right: 25%;
 }
