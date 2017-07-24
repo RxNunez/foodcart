@@ -15,10 +15,10 @@ var laPinataTakos = new Foodfinder("Mexican", "SW 3rd & Ash", "La Pinata Takos")
 var koiFusion = new Foodfinder("Asian", "2010 W Burnside", "Koi Fusion");
 var someAsianTruck = new Foodfinder("Asian", "2010 W Burnside", "Asian Truck");
 
-var directory = [grilledCheeseGrill, smallPharaoh, laPinataTakos, koiFusion];
+var directory = [grilledCheeseGrill, smallPharaoh, laPinataTakos, koiFusion, someAsianTruck];
 
 var asian=[];
-var userinput = "asian";
+var userinput = "Asian";
 
 for(i=0; i<directory.length; i++){
   if(directory[i].type === userinput)
