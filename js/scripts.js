@@ -15,16 +15,10 @@ var laPinataTakos = new Foodfinder("Mexican", "SW 3rd & Ash", "La Pinata Takos")
 var koiFusion = new Foodfinder("Asian", "2010 W Burnside", "Koi Fusion");
 
 
-Foodfinder.prototype.
-
-
-
-
-
-
-
-
-
+Foodfinder.prototype.chooseType=function(){
+  return this.type;
+alert(this.type);
+}
 
 
 
@@ -36,3 +30,10 @@ Foodfinder.prototype.
 
 
 // UI Logic
+$(document).ready(function(){
+
+
+
+
+
+});
