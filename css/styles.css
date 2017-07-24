@@ -1,0 +1,37 @@
+body {
+  font-family: monospace;
+}
+
+#logo {
+  width: 75px;
+}
+
+#header {
+  width: 100%;
+}
+
+#contact {
+  text-align: right;
+  margin-top: 20px;
+}
+
+#banner {
+  background-image: url('../img/background.jpg');
+  height: 690px;
+}
+
+.btn-unique {
+  font-size: 75%;
+  color: white;
+  background-color: black;
+}
+
+#search {
+  margin-top: 310px;
+}
+
+#check-list {
+  position:absolute;
+  bottom:15px;
+  right: 3%;
+}
