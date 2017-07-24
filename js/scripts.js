@@ -9,10 +9,10 @@ function Foodfinder(type, location, truck) {
   // this.description = [];
 }
 
+var grilledCheeseGrill = new Foodfinder("American", "SW 10th & Alder", "Grilled Cheese Grill");
 var smallPharaoh = new Foodfinder("Middle Eastern", "SW 5th & Stark", "Small Pharaoh");
 var laPinataTakos = new Foodfinder("Mexican", "SW 3rd & Ash", "La Pinata Takos");
 var koiFusion = new Foodfinder("Asian", "2010 W Burnside", "Koi Fusion");
-var someAsianTruck = new Foodfinder("Asian", "2010 W Burnside", "Asian Truck");
 var altengartz = new Foodfinder("", "", "Altengartz");
 var esanthai = new Foodfinder("asian","", "E-San Thai Cart");
 var traditionalpolish = new Foodfinder("american","","Traditional Polish Cuisine");
@@ -37,9 +37,32 @@ var euroDish = new Foodfinder("american","", "Eurodish");
 var nongsKhao =  new Foodfinder("asian","", "Nong's Khao Man Gai");
 var annaThaiBasil = new Foodfinder("asian","", "Anna Thai Basil");
 var alMawj = new Foodfinder("middleastern","", "Al Mawj");
-var grilledCheeseGrill =  new Foodfinder("american","", "The Grilled Cheese Grill")
+var grilledCheeseGrill =  new Foodfinder("american","", "The Grilled Cheese Grill");
+var chezDodo = new Foodfinder("Asian", "SW 5th & Stark", "Chez Dodo");
+var tabor = new Foodfinder("American", "SW 5th & Stark", "Tabor");
+var caribbeanKitchen = new Foodfinder("American", "SW 5th & Stark", "Caribbean Kitchen");
+var kingslandKitchen = new Foodfinder("American", "SW 5th & Stark", "Kingsland Kitchen");
+var laJarochita = new Foodfinder("Mexican", "SW 5th & Stark", "La Jarochita");
+var veliThai = new Foodfinder("Asian", "SW 5th & Stark", "Veli Thai");
+var stumptownSliders = new Foodfinder("American", "SW 5th & Stark", "Stumptown Sliders");
+var donJalapeno = new Foodfinder("Mexican", "SW 5th & Stark", "Don Jalapeno");
+var broDogs = new Foodfinder("Americans", "SW 5th & Stark", "Bro-Dogs");
+var babylonIraqi = new Foodfinder("Middle Eastern", "SW 5th & Stark", "Babylon Iraqi");
+var koreanTwist = new Foodfinder("Asian", "SW 5th & Stark", "Korean Twist");
+var realTasteOfIndia = new Foodfinder("Middle Eastern", "SW 5th & Stark", "Real Taste of India");
+var steaksFifthAvenue = new Foodfinder("American", "SW 5th & Stark", "Steaks Fifth Avenue");
+var hawaiianGrill = new Foodfinder("American", "SW 5th & Stark", "Hawaiian Grill");
+var schnitzelwich = new Foodfinder("American", "SW 5th & Stark", "Schnitzelwich");
+var keeMaoThai = new Foodfinder("Asian", "SW 5th & Stark", "Kee Mao Thai Food Cart");
+var thaiSky = new Foodfinder("Asian", "SW 5th & Stark", "Thai Sky");
+var wagsyHotBeef = new Foodfinder("American", "SW 5th & Stark", "Wagsy's Hot Beef Sandwiches");
+var havannaHeaven = new Foodfinder("American", "SW 5th & Stark", "Havanna Heaven");
+var khobKhun = new Foodfinder("Middle Eastern", "SW 5th & Stark", "Khob Khun");
+var pretzelBakery = new Foodfinder("American", "SW 5th & Stark", "Portland Pretzel Bakery");
+var shawarmaStar = new Foodfinder("Middle Eastern", "SW 5th & Stark", "Shawarma Star");
+var banMi = new Foodfinder("Asian", "SW 5th & Stark", "Condenz Banh Mi");
 
-var directory = [grilledCheeseGrill, smallPharaoh, laPinataTakos, koiFusion, someAsianTruck, altengartz, esanthai, traditionalpolish, numberOneBento, wolfandbear, gyroKing, zendako, bingMi, baghdadiraqi, sawasdeeThai, theFryingScotsman, marcoPoloSandwiches, rollingGourmetFusion, samsSahj, titosBurritos, thaiKeeMao, samuraiBento, wholeBowl, gyroPlace, euroDish, nongsKhao, annaThaiBasil, alMawj, grilledCheeseGrill, potatoesonninth];
+var directory = [chezDodo, tabor, caribbeanKitchen, kingslandKitchen, laJarochita, veliThai, stumptownSliders, donJalapeno, broDogs, babylonIraqi, koreanTwist, realTasteOfIndia, steaksFifthAvenue, hawaiianGrill, schnitzelwich, keeMaoThai, thaiSky, wagsyHotBeef, havannaHeaven, khobKhun, pretzelBakery, shawarmaStar, banMi,grilledCheeseGrill, smallPharaoh, laPinataTakos, koiFusion, someAsianTruck, altengartz, esanthai, traditionalpolish, numberOneBento, wolfandbear, gyroKing, zendako, bingMi, baghdadiraqi, sawasdeeThai, theFryingScotsman, marcoPoloSandwiches, rollingGourmetFusion, samsSahj, titosBurritos, thaiKeeMao, samuraiBento, wholeBowl, gyroPlace, euroDish, nongsKhao, annaThaiBasil, alMawj, grilledCheeseGrill, potatoesonninth];
 
 var asian=[];
 var userinput = "Asian";
