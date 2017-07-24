@@ -14,11 +14,19 @@ var smallPharaoh = new Foodfinder("Middle Eastern", "SW 5th & Stark", "Small Pha
 var laPinataTakos = new Foodfinder("Mexican", "SW 3rd & Ash", "La Pinata Takos");
 var koiFusion = new Foodfinder("Asian", "2010 W Burnside", "Koi Fusion");
 
+var directory = [grilledCheeseGrill, smallPharaoh, laPinataTakos, koiFusion];
 
-Foodfinder.prototype.chooseType=function(){
-  return this.type;
-alert(this.type);
-}
+var x = "asian"
+
+var result = directory.find(function(obj){
+  return obj.type === x
+
+});
+console.log(result);
+alert(result.truck);
+
+
+
 
 
 
@@ -30,10 +38,10 @@ alert(this.type);
 
 
 // UI Logic
-$(document).ready(function(){
-
-
-
-
-
-});
+// $(document).ready(function(){
+//
+//
+//
+//
+//
+// });
