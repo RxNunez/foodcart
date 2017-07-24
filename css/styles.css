@@ -5,6 +5,7 @@ body {
 
 #logo {
   width: 75px;
+  margin-left: 20px;
 }
 
 #header {
@@ -21,12 +22,7 @@ body {
   color: white;
   background-color: black;
 }
-
-#search {
-  margin-top: 310px;
-}
-
-/*#check-list {
+ /*#check-list {
   position:absolute;
   bottom:15px;
   right: 3%;
@@ -44,4 +40,10 @@ html {
 }
 #banner{
   background: transparent;
+  background-position-x: center;
+  background-position-y: center;
+
+}
+.container{
+    width: 100%
 }
