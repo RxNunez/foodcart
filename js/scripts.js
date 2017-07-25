@@ -108,7 +108,17 @@ var numberRan = randomNumberGenerator(asian.length);
 alert(numberRan);
 console.log(asian[numberRan]);
 
-
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(asian[numberRan].lat,asian[numberRan].long);
+  var mapOptions = {center: myCenter, zoom: 10};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    icon: "pinkball.png"
+  });
+  marker.setMap(map);
+}
 
 
 
