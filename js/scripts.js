@@ -23,6 +23,7 @@ function randomNumberGenerator(min, max) {
 randomNumberGenerator(0, directory.length);
 
 var smallPharaoh = new Foodfinder("Middle Eastern","",'[45.520772, -122.676335]', "Small Pharaoh");
+var dumpTruck = new Foodfinder("asian","1071 SW Alder St",'[45.520949, -122.682212]', "The Dump Truck");
 var laPinataTakos = new Foodfinder("Mexican", "SW 3rd & Ash",'[45.5221111, -122.6731111]', "La Pinata Takos");
 var koiFusion = new Foodfinder("Asian", "2010 W Burnside",'[45.523034, -122.692822]', "Koi Fusion");
 var altengartz = new Foodfinder("", "",'[45.520697, -122.681491]',"Altengartz");
@@ -86,7 +87,7 @@ var asianStation = new Foodfinder("Asian", "", (45.520394,-122.673418), "Asian S
 var justThai = new Foodfinder("Asian", "", (45.520435,-122.674455), "Just Thai");
 var buddyBearTartHouse = new Foodfinder("American", "", (45.520133,-122.674389), "Buddy Bear Tart House");
 
-var directory = [chezDodo, caribbeanKitchen, kingslandKitchen, laJarochita, veliThai, stumptownSliders, donJalapeno, broDogs, babylonIraqi, koreanTwist, realTasteOfIndia, steaksFifthAvenue, hawaiianGrill, schnitzelwich, keeMaoThai, thaiSky, wagsyHotBeef, khobKhun, pretzelBakery, shawarmaStar, banMi, smallPharaoh, laPinataTakos, koiFusion, someAsianTruck, altengartz, esanthai, traditionalpolish, numberOneBento, wolfandbear, gyroKing, zendako, bingMi, baghdadiraqi, sawasdeeThai, theFryingScotsman, marcoPoloSandwiches, rollingGourmetFusion, samsSahj, titosBurritos, wholeBowl, gyroPlace, euroDish, nongsKhao, annaThaiBasil, alMawj, grilledCheeseGrill, potatoesonninth, buddyBearTartHouse, justThai, asianStation, friendlyFood, rayaMiddleEastFood, taqueriaVillanueva, welcomeToMediterraneanCuisine, casablancaCuisine, phatBlueBuddha, elPilon, honeyThaiFood, culturedCaveman, elmasry, dcVegetarian, theFrenchToastConnection, donJalapeno, mamaChowsKitchen, moonlightMediterranean ];
+var directory = [chezDodo, dumpTruck, caribbeanKitchen, kingslandKitchen, laJarochita, veliThai, stumptownSliders, donJalapeno, broDogs, babylonIraqi, koreanTwist, realTasteOfIndia, steaksFifthAvenue, hawaiianGrill, schnitzelwich, keeMaoThai, thaiSky, wagsyHotBeef, khobKhun, pretzelBakery, shawarmaStar, banMi, smallPharaoh, laPinataTakos, koiFusion, someAsianTruck, altengartz, esanthai, traditionalpolish, numberOneBento, wolfandbear, gyroKing, zendako, bingMi, baghdadiraqi, sawasdeeThai, theFryingScotsman, marcoPoloSandwiches, rollingGourmetFusion, samsSahj, titosBurritos, wholeBowl, gyroPlace, euroDish, nongsKhao, annaThaiBasil, alMawj, grilledCheeseGrill, potatoesonninth, buddyBearTartHouse, justThai, asianStation, friendlyFood, rayaMiddleEastFood, taqueriaVillanueva, welcomeToMediterraneanCuisine, casablancaCuisine, phatBlueBuddha, elPilon, honeyThaiFood, culturedCaveman, elmasry, dcVegetarian, theFrenchToastConnection, donJalapeno, mamaChowsKitchen, moonlightMediterranean ];
 
 var asian=[];
 var userinput = "Asian";
