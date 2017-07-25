@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="contact">
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row"  id="header">
+        <div class="col-md-6">
+          <h1><a href="index.html" class="logo"><img src="img/logo.png" alt="logo image" id="logo">&nbsp;FOoDCaRtFindEr</a></h1>
+        </div>
+        <div class="col-md-6" id="contact">
+          <h3>Where to start to open a cart?
+            <button type="button" class="btn-unique" name="button"><a href="https://multco.us/services/food-carts-mobile-food-units" target="_blank">New kid on the Block</a></button></h3>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <form id="contactForm" class="well" action="mailto:FoodcartFinder@yahoo.com" method="GET">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" name="name" placeholder="Jane Doe" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="name">Email:</label>
+          <input type="email" name="email" placeholder="example@org.com" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="subject" name="message" placeholder="Write something.." class="form-control" rows="8"></textarea>
+        </div>
+        <button type="submit" name="button" class="btn-success btn-sm">Send</button>
+      </form>
+      <div>
+        <button type="button" name="button" class="btn-success btn-lg" id="check-list">Check our list</button>
+      </div>
+    </div>
+  </body>
+</html>
