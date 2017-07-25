@@ -66,7 +66,7 @@ var khobKhun = new Foodfinder("Middle Eastern", "SW 5th & Stark", "Khob Khun");
 var pretzelBakery = new Foodfinder("American", "SW 5th & Stark", "Portland Pretzel Bakery");
 var shawarmaStar = new Foodfinder("Middle Eastern", "SW 5th & Stark", "Shawarma Star");
 var banMi = new Foodfinder("Asian", "SW 5th & Stark", "Condenz Banh Mi");
-var moonlight Mediterranean = new Foodfinder("Middle Eastern", "232 SW Stark Ave", "Moonlight Mediterranean Food");
+var moonlightMediterranean = new Foodfinder("Middle Eastern", "232 SW Stark Ave", "Moonlight Mediterranean Food");
 var mamaChowsKitchen = new Foodfinder("Asian", "300 SW 2nd Ave", "Mama Chow's Kitchen");
 var donJalapeno = new Foodfinder("Mexican", "421 SW 3rd Ave", "Don Jalapeno");
 var theFrenchToastConnection = new Foodfinder("American", "321 SW 2nd Ave", "The French Toast Connection");
@@ -117,7 +117,11 @@ console.log(asian);
 
 
 // UI Logic
-// $(document).ready(function(){
+$(document).ready(function(){
+    $(".btn").click(function(){
+        $("#myModal").modal('show');
+    });
+});
 //
 //
 //
