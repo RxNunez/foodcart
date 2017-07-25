@@ -20,7 +20,7 @@ function coordinates (lattitude, longitude){
 function randomNumberGenerator(length) {
     return Math.floor(Math.random() * (length));
 }
-randomNumberGenerator(0, directory.length);
+
 var smallPharaoh = new Foodfinder("Middle Eastern","1900 SW 4th Ave",'45.520772', '-122.676335', "Small Pharaoh");
 var dumpTruck = new Foodfinder("asian","1071 SW Alder St",'45.520949', '-122.682212', "The Dump Truck");
 var laPinataTakos = new Foodfinder("Mexican", "SW 3rd & Ash",'45.5221111', '-122.6731111', "La Pinata Takos");
@@ -99,6 +99,24 @@ var userinput = "Asian";
 for(i=0; i<directory.length; i++){
   if(directory[i].type === userinput)
   asian.push(directory[i]);
+}
+
+
+console.log(asian);
+var numberRan = randomNumberGenerator(asian.length);
+alert(numberRan);
+console.log(asian[numberRan]);
+
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(asian[numberRan].lat,asian[numberRan].long);
+  var mapOptions = {center: myCenter, zoom: 10};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    icon: "pinkball.png"
+  });
+  marker.setMap(map);
 }
 
 
