@@ -20,7 +20,7 @@ function coordinates (lattitude, longitude){
 function randomNumberGenerator(length) {
     return Math.floor(Math.random() * (length));
 }
-randomNumberGenerator(0, directory.length);
+
 var smallPharaoh = new Foodfinder("Middle Eastern","1900 SW 4th Ave",'45.520772', '-122.676335', "Small Pharaoh");
 var dumpTruck = new Foodfinder("asian","1071 SW Alder St",'45.520949', '-122.682212', "The Dump Truck");
 var laPinataTakos = new Foodfinder("Mexican", "SW 3rd & Ash",'45.5221111', '-122.6731111', "La Pinata Takos");
