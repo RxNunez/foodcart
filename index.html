@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
     <title>FoodCart</title>
   </head>
@@ -30,11 +31,29 @@
             <option>Mexican</option>
             <option>Asian</option>
           </select>
-          <span class="input-group-btn"><button class="btn btn-success" type="button">Go!</button></span>
+          <span class="input-group-btn"><button class="btn btn-success" type="button" href="#myModal" role="button" data-toggle="modal">Go!</button></span>
         </div>
       </form>
       <div>
         <button type="button" name="button" class="btn-success btn-lg" id="check-list">Check our list</button>
+      </div>
+    </div>
+    <div id="myModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Confirmation</h4>
+          </div>
+          <div class="modal-body">
+              <p>Do you want to save changes you made to document before closing?</p>
+              <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
       </div>
     </div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>

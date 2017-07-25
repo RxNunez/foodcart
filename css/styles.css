@@ -88,13 +88,29 @@ a:hover {
 }
 
 .well{
-  background: transparent;
+  background: black;
   color: #5cb85c;
   font-size: 26px;
-  font-variant: small-caps;
   text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+  font-style: italic;
+}
+
+label{
+  background-color: #000;
+}
+
+input[type="text"]{
+  background-color: #fff9e6;
+}
+
+input[type="email"]{
+  background-color: #fff9e6;
+}
+
+#subject{
+  background-color: #fff9e6;
 }
