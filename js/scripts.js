@@ -11,17 +11,16 @@ function randomNumberGenerator(length) {
     return Math.floor(Math.random() * (length));
 }
 var smallPharaoh = new Foodfinder("Middle Eastern","1900 SW 4th Ave",'45.520772', '-122.676335', "Small Pharaoh", "../img/smallPharaoh.jpg");
-var dumpTruck = new Foodfinder("asian","1071 SW Alder St",'45.520949', '-122.682212', "The Dump Truck", "../img/");
+var dumpTruck = new Foodfinder("asian","1071 SW Alder St",'45.520949', '-122.682212', "The Dump Truck", "../img/dumpTruck.jpg");
 var laPinataTakos = new Foodfinder("Mexican", "SW 3rd & Ash",'45.5221111', '-122.6731111', "La Pinata Takos", "../img/laPinataTakos.jpg");
 var koiFusion = new Foodfinder("Asian", "2010 W Burnside",'45.523034', '-122.692822', "Koi Fusion", "../img/koiFusion.jpg");
 var altengartz = new Foodfinder("American", "SW 10th & Alder",'45.520697', '-122.681491',"Altengartz", "../img/altengartz.jpg");
 var esanthai = new Foodfinder("asian", "SW 10th & Alder", '45.520928',' -122.681479',"E-San Thai Cart", "../img/esanthai.jpg");
-var traditionalpolish = new Foodfinder("american", "SW 10th & Alder",'45.520853',' -122.681507',"Traditional Polish Cuisine", "../img/traditionalpolish");
 var numberOneBento = new Foodfinder("asian", "SW 10th & Alder",'45.520813', '-122.681513', "Number 1 Bento", "../img/numberOneBento.jpg");
 var wolfandbear = new Foodfinder("american", "SW 10th & Washington",'45.521173',' -122.681429', "Wolf and Bear", "../img/wolfandbear.jpg");
 var zendako = new Foodfinder("asian","SW 10th & Washington",'45.521126', '-122.681202', "Zendako", "../img/zendako.jpg");
 var bingMi = new Foodfinder("asian","SW 9th & Alder",'45.520533', '-122.680810', "Bing Mi", "../img/bingMi.jpg");
-var baghdadiraqi =  new Foodfinder("middleastern","SW 10th & Washington",'45.521192', '-122.681206', "Baghdad Iraqi Grill", "../img/");
+var baghdadiraqi =  new Foodfinder("middleastern","SW 10th & Washington",'45.521192', '-122.681206', "Baghdad Iraqi Grill", "../img/baghdadiraqi.png");
 var sawasdeeThai = new Foodfinder("asian","SW 9th & Alder",'45.520593', '-122.680961', "Sawasdee Thai", "../img/sawasdeeThai.jpg");
 var theFryingScotsman = new Foodfinder("American","SW 9th & Alder", '45.520766', '-122.680722',"The Frying Scotsman", "../img/theFryingScotsman.jpg");
 var marcoPoloSandwiches = new Foodfinder("American","SW 9th & Washington",'45.520874', '-122.680625', "Marco Polo's Sandwiches", "../img/marcoPoloSandwiches.jpg");
