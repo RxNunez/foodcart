@@ -1,6 +1,5 @@
 body {
   font-family: monospace;
-
 }
 
 #logo {
@@ -23,7 +22,7 @@ body {
   background-color: black;
 }
 
- #check-list {
+#check-list {
   position:absolute;
   bottom:15px;
   right: 3%;
@@ -40,6 +39,17 @@ html {
   height: 100%;
 }
 
+.contact {
+  color: white;
+  background-image: url('../img/contactBackground.jpg');
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
 #banner{
   position:absolute;
   top: 50%;
@@ -48,7 +58,7 @@ html {
 }
 
 .container{
-    width: 100%
+  width: 100%
 }
 
 .go{
@@ -56,4 +66,35 @@ html {
   top: 50%;
   left: 75%;
   right: 25%;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: green;
+}
+
+.logo{
+  color: black;
+}
+
+#contactForm{
+  position:absolute;
+  top: 40%;
+  left: 30%;
+  right: 30%;
+}
+
+.well{
+  background: transparent;
+  color: #5cb85c;
+  font-size: 26px;
+  font-variant: small-caps;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000
 }
