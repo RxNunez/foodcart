@@ -97,7 +97,7 @@ $(document).ready(function(){
       var userInput = $("#foodType").val();
       var randomSelection = randomFoodCart(userInput);
       $('.name').html(randomSelection.truck);
-      $('.image').html('<img src='+ randomSelection.img +'  alt="restaurant" style="width:304px;height:228px;">');
+      $('.image').html('<img src='+ randomSelection.img +'  alt="restaurant" class="image">');
       $('.address').html(randomSelection.location);
       function myMap() {
         var mapCanvas = document.getElementById("map");

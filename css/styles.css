@@ -132,3 +132,8 @@ input[type="email"]{
 #results{
   display: none;
 }
+
+.image{
+  width: 304px;
+  height: 228px;
+}
