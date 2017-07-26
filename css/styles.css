@@ -114,3 +114,11 @@ input[type="email"]{
 #subject{
   background-color: #fff9e6;
 }
+
+.modal-header{
+  background-color: orange;
+}
+
+.modal-footer{
+  background-color: orange;
+}
