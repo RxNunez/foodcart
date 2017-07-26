@@ -10,7 +10,6 @@ function Foodfinder(type, location, lat, long, truck, image) {
 function randomNumberGenerator(length) {
     return Math.floor(Math.random() * (length));
 }
-
 function randomFoodCart(input) {
   if (input === "random") {
     var numberRan = randomNumberGenerator(directory.length);
@@ -70,7 +69,7 @@ var khobKhun = new Foodfinder("Asian","SW 5th Ave & Stark St",'45.521048', '-122
 var pretzelBakery = new Foodfinder("American","SW 5th Ave", '45.521153', '-122.676157', "Portland Pretzel Bakery", "./img/missing-photo.png");
 var shawarmaStar = new Foodfinder("Middle Eastern","324 SW 5th Ave", '45.521242', '-122.676112', "Shawarma Star", "./img/missing-photo.png");
 var banMi = new Foodfinder("Asian","324 SW 5th Ave", '45.520795', '-122.676225', "Condenz Banh Mi", "./img/condenz.jpg");
-var moonlightMediterranean = new Foodfinder("Middle Eastern","232 SW Stark Ave", '45.520182','-122674344',  "Moonlight Mediterranean Food", "./img/moonlightMediterranean.jpg");
+var moonlightMediterranean = new Foodfinder("Middle Eastern","232 SW Stark Ave", '45.520182','-122.674344',  "Moonlight Mediterranean Food", "./img/moonlightMediterranean.jpg");
 var mamaChowsKitchen = new Foodfinder("Asian", "300 SW 2nd Ave", '45.520244','-122.673548', "Mama Chow's Kitchen", "./img/mamaChowsKitchen.jpg");
 var donJalapeno = new Foodfinder("Mexican", "421 SW 3rd Ave", '45.519927','-122.674522', "Don Jalapeno", "./img/donJalapeno.jpg");
 var theFrenchToastConnection = new Foodfinder("American", "321 SW 2nd Ave", '45.520053','-122.673494', "The French Toast Connection", "./img/theFrenchToastConnection.jpg");
@@ -90,80 +89,28 @@ var justThai = new Foodfinder("Asian", "SW 3rd & Stark", '45.520435','-122.67445
 var buddyBearTartHouse = new Foodfinder("American", "432 SW 3rd Ave", '45.520133','-122.674389', "Buddy Bear Tart House", "./img/buddyBearTartHouse.jpg");
 
 var directory = [chezDodo, dumpTruck, caribbeanKitchen, kingslandKitchen, laJarochita, veliThai, stumptownSliders, donJalapeno, broDogs, babylonIraqi, koreanTwist, realTasteOfIndia, steaksFifthAvenue, hawaiianGrill, schnitzelwich, keeMaoThai, thaiSky, wagsyHotBeef, khobKhun, pretzelBakery, shawarmaStar, banMi, smallPharaoh, laPinataTakos, koiFusion, altengartz, esanthai, numberOneBento, wolfandbear, zendako, bingMi, baghdadiraqi, sawasdeeThai, theFryingScotsman, marcoPoloSandwiches, rollingGourmetFusion, samsSaj, titosBurritos, wholeBowl, gyroPlace, euroDish, nongsKhao, annaThaiBasil, alMawj, grilledCheeseGrill, buddyBearTartHouse, justThai, asianStation, friendlyFood, rayaMiddleEastFood, taqueriaVillanueva, welcomeToMediterraneanCuisine, casablancaCuisine, phatBlueBuddha, elPilon, honeyThaiFood, culturedCaveman, elmasry, dcVegetarian, theFrenchToastConnection, donJalapeno, mamaChowsKitchen, moonlightMediterranean];
-//
-// var numberRan = randomNumberGenerator(directory.length);
-// alert(numberRan);
-// console.log(directory[numberRan]);
-//
-// var asian=[];
-// var userinput = "Asian";
-//
-// for(i=0; i<directory.length; i++){
-//   if(directory[i].type === userinput)
-//   asian.push(directory[i]);
-// }
-//
-//
-// console.log(asian);
-// var numberRan = randomNumberGenerator(asian.length);
-// alert(numberRan);
-// console.log(asian[numberRan]);
-//
-// function myMap() {
-//   var mapCanvas = document.getElementById("map");
-//   var myCenter = new google.maps.LatLng(asian[numberRan].lat,asian[numberRan].long);
-//   var mapOptions = {center: myCenter, zoom: 10};
-//   var map = new google.maps.Map(mapCanvas,mapOptions);
-//   var marker = new google.maps.Marker({
-//     position: myCenter,
-//     icon: "pinkball.png"
-//   });
-//   marker.setMap(map);
-// }
-//
-//
-// console.log(asian);
-// var numberRan = randomNumberGenerator(asian.length);
-// alert(numberRan);
-// console.log(asian[numberRan]);
-//
-// function myMap() {
-//   var mapCanvas = document.getElementById("map");
-//   var myCenter = new google.maps.LatLng(asian[numberRan].lat,asian[numberRan].long);
-//   var mapOptions = {center: myCenter, zoom: 10};
-//   var map = new google.maps.Map(mapCanvas,mapOptions);
-//   var marker = new google.maps.Marker({
-//     position: myCenter,
-//     icon: "pinkball.png"
-//   });
-//   marker.setMap(map);
-// }
-
-
-
-
-
-
-
-
-
-
-
 
 // UI Logic
 $(document).ready(function(){
-    $(".btn").click(function(event){
+ $(".btn").click(function(event){
       event.preventDefault();
       var userInput = $("#foodType").val();
       var randomSelection = randomFoodCart(userInput);
       $('.name').html(randomSelection.truck);
       $('.image').html('<img src='+ randomSelection.img +'  alt="restaurant" style="width:304px;height:228px;">');
       $('.address').html(randomSelection.location);
+      function myMap() {
+        var mapCanvas = document.getElementById("map");
+        var myCenter = new google.maps.LatLng(randomSelection.lat,randomSelection.long);
+        var mapOptions = {center: myCenter, zoom: 20};
+        var map = new google.maps.Map(mapCanvas,mapOptions);
+        var marker = new google.maps.Marker({
+          position: myCenter,
+          animation: google.maps.Animation.BOUNCE
+        });
+        marker.setMap(map);
+      }
+      myMap();
+      $("#myModal").modal("show")
     });
 });
-//
-//
-//
-//
-//
-// });

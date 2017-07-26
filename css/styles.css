@@ -123,6 +123,10 @@ input[type="email"]{
   background-color: orange;
 }
 
+.modal-content{
+  border-radius: 10px;
+}
+
 .list {
   color: white;
   background-image: url('../img/listBackground.jpg');
@@ -140,4 +144,5 @@ input[type="email"]{
   left: 17%;
   width: 100%;
 }
+
 
