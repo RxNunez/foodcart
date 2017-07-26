@@ -122,3 +122,6 @@ input[type="email"]{
 .modal-footer{
   background-color: orange;
 }
+.modal-content{
+  border-radius: 10px;
+}
