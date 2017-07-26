@@ -6,7 +6,7 @@
 
 ## Description
 
-_{The site was developed to create an application that would find local food-carts based on specific type of cuisine desired, the users location, or truck name to allow for food selection and price range. Designed as a future resource of good coding practices for spacing, indentation, tag placement and uses. Proper use and spacing of HTML markup block and inline elements and CSS and Javascript. Some of the items used were forms, buttons. Its purpose and usage was simple information, interactivity, styles, and the base of a personal portfolio for future employment opportunities.}_
+_The site was developed to create an application that would find local food-carts at random or based on specific the type of cuisine desired. Designed as a future resource of good coding practices for spacing, indentation, tag placement and uses. Proper use and spacing of HTML markup block and inline elements and CSS and Javascript. Some of the items used were forms, buttons. Its purpose and usage was simple information, interactivity, styles, and the base of a personal portfolio for future employment opportunities._
 
 ## Specifications
 _Specs from FoodCartFinder
