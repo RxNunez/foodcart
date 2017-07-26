@@ -11,9 +11,12 @@ _{The site was developed to create an application that would find local food-car
 ## Specifications
 _Specs from FoodCartFinder
 
-## Specs "it can..."
+## Specs
 | Description                                        | Input                                       | Output              |
 | -------------------------------------------------- | -------------------------------------------:| ------------------: |
+| Select objects from an array based on property   | var directory = [{truck1:["asian","blue"]},{truck2:["american","green"]},{truck3:["asian","red"]},{truck4:["middleastern","yellow"]}] | var asian = [{truck1:["asian","blue"]},{truck3:["asian","red"]}]                   |
+| Select an object from an array that share the same property at random | var asian = [{truck1:["asian","blue"]},{truck3:["asian","red"]}] | var randomAsian = [{truck3:["asian","red"]}]                    |
+| Select an object from an array at random | var directory = [{truck1:["asian","blue"]},{truck2:["american","green"]},{truck3:["asian","red"]},{truck4:["middleastern","yellow"]}] | var random = [{truck2:["american","green"]}]                    |
 | Find                                               |                                             |                     |
 | Find                                               |                                             |                     |
 
