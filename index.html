@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container" id="main">
       <form id="banner">
         <div class="input-group">
           <select class="form-control" id="foodType">
@@ -30,12 +30,14 @@
             <option value="Mexican">Mexican</option>
             <option value="Asian">Asian</option>
           </select>
-          <span class="input-group-btn"><button class="btn btn-success" type="button" href="#myModal" role="button">Go!</button></span>
+          <span class="input-group-btn"><button class="btn btn-success open" type="button" href="#myModal" role="button">Go!</button></span>
         </div>
       </form>
       <div>
         <button type="button" name="button" class="btn-success btn-lg" id="check-list">Check our list</button>
       </div>
+    </div>
+    <div id="results">
     </div>
     <div id="myModal" class="modal fade">
       <div class="modal-dialog modal-lg">
@@ -68,7 +70,7 @@
         </div>
           <div class="modal-footer">
               <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-primary open">Save changes</button>
           </div>
         </div>
       </div>

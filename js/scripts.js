@@ -92,7 +92,7 @@ var directory = [chezDodo, dumpTruck, caribbeanKitchen, kingslandKitchen, laJaro
 
 // UI Logic
 $(document).ready(function(){
- $(".btn").click(function(event){
+ $(".open").click(function(event){
       event.preventDefault();
       var userInput = $("#foodType").val();
       var randomSelection = randomFoodCart(userInput);
@@ -102,15 +102,28 @@ $(document).ready(function(){
       function myMap() {
         var mapCanvas = document.getElementById("map");
         var myCenter = new google.maps.LatLng(randomSelection.lat,randomSelection.long);
-        var mapOptions = {center: myCenter, zoom: 20};
+        var mapOptions = {center: myCenter, zoom: 17};
         var map = new google.maps.Map(mapCanvas,mapOptions);
         var marker = new google.maps.Marker({
           position: myCenter,
           animation: google.maps.Animation.BOUNCE
         });
+
         marker.setMap(map);
       }
       myMap();
-      $("#myModal").modal("show")
+      $("#myModal").modal("show");
+      $('#myModal').on('shown.bs.modal', function () {
+          google.maps.event.trigger(map, "resize");
+      });
     });
-});
+    $("#check-list").click(function(event) {
+      event.preventDefault();
+      directory.forEach(function(object) {
+        $("#results").append('<div class="row row1 container"><div class="col-md-6"><h1 class="cartName">Cart Name</h1><p class="name">'+ object.truck +'</p></div><div class="col-md-6"><h1 class="cartPic">Look for Us</h1><div class="image"><img src='+ object.img +'  alt="restaurant" style="width:304px;height:228px;"></div></div></div><div class="row row2 container"><div class="col-md-6"><h1 class="cartMap">'+ object.type +'</h1><div id="map"></div></div><div class="col-md-6"><h1 class="cartAddress">Address</h1><p class="address">'+ object.location +'</p></div></div>');
+      });
+      $("#main").hide();
+      $("#results").show();
+
+     });
+    });

@@ -125,3 +125,10 @@ input[type="email"]{
 .modal-content{
   border-radius: 10px;
 }
+#map{
+  width:304px;
+  height:228px;
+}
+#results{
+  display: none;
+}
