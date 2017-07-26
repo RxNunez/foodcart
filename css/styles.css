@@ -122,6 +122,27 @@ input[type="email"]{
 .modal-footer{
   background-color: orange;
 }
+
 .modal-content{
   border-radius: 10px;
 }
+
+.list {
+  color: white;
+  background-image: url('../img/listBackground.jpg');
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+#listPanel{
+  position:absolute;
+  top: 40%;
+  left: 17%;
+  width: 100%;
+}
+
+
