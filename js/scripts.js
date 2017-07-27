@@ -133,7 +133,6 @@ $(document).ready(function(){
       event.preventDefault();
       $("#results2").empty();
       var buttonInput = $(this).val();
-      console.log(buttonInput);
       var listPick = listSelector(buttonInput);
       console.log(listPick);
       listPick.forEach(function(object) {
@@ -166,7 +165,7 @@ $(document).ready(function(){
 
       $("#main").hide();
       $('#check-list').on('click', function () {
-          google.maps.event.trigger(map, "resize");
+        google.maps.event.trigger(map, "resize");
       });
       $("#results1").show();
       $("#results2").show();

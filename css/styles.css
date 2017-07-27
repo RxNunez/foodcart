@@ -152,7 +152,10 @@ input[type="email"]{
   width: 304px;
   height: 228px;
 }
-
+.search img{
+  width: 75px;
+  height: 75px;
+}
 .picture{
   width: 100px;
   height: 100px;
@@ -170,12 +173,6 @@ input[type="email"]{
 .icons {
   display: none;
 }
-
-.search img{
-  width: 75px;
-  height: 75px;
-}
-
 .search {
   position: absolute;
   left: 33%;
