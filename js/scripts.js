@@ -7,9 +7,11 @@ function Foodfinder(type, location, lat, long, truck, image) {
   this.truck = truck;
   this.img = image;
 }
+
 function randomNumberGenerator(length) {
     return Math.floor(Math.random() * (length));
 }
+
 function randomFoodCart(input) {
   if (input === "random") {
     var numberRan = randomNumberGenerator(directory.length);
@@ -24,6 +26,21 @@ function randomFoodCart(input) {
     return selected[numberRan];
   }
 }
+
+function listSelector(input) {
+  var selected=[];
+  if(input === "all"){
+    selected = directory;
+    return selected;
+  }else{
+    for(i=0; i<directory.length; i++){
+    if(directory[i].type === input)
+    selected.push(directory[i]);
+  }
+  return selected;
+ }
+}
+
 var smallPharaoh = new Foodfinder("Middle Eastern","1900 SW 4th Ave",'45.520772', '-122.676335', "Small Pharaoh", "./img/smallPharaoh.jpg");
 var dumpTruck = new Foodfinder("Asian","1071 SW Alder St",'45.520949', '-122.682212', "The Dump Truck", "./img/dumpTruck.jpg");
 var laPinataTakos = new Foodfinder("Mexican", "SW 3rd & Ash",'45.5221111', '-122.6731111', "La Pinata Takos", "./img/laPinataTakos.jpg");
@@ -34,7 +51,7 @@ var numberOneBento = new Foodfinder("Asian", "SW 10th & Alder",'45.520813', '-12
 var wolfandbear = new Foodfinder("American", "SW 10th & Washington",'45.521173',' -122.681429', "Wolf and Bear", "./img/wolfandbear.jpg");
 var zendako = new Foodfinder("Asian","SW 10th & Washington",'45.521126', '-122.681202', "Zendako", "./img/zendako.jpg");
 var bingMi = new Foodfinder("Asian","SW 9th & Alder",'45.520533', '-122.680810', "Bing Mi", "./img/bingMi.jpg");
-var baghdadiraqi =  new Foodfinder("Middle Eastern","SW 10th & Washington",'45.521192', '-122.681206', "Baghdad Iraqi Grill", "./img/baghdadiraqi.png");
+var baghdadiraqi =  new Foodfinder("Middle Eastern","SW 10th & Washington",'45.5211921', '-122.681206', "Baghdad Iraqi Grill", "./img/baghdadiraqi.png");
 var sawasdeeThai = new Foodfinder("Asian","SW 9th & Alder",'45.520593', '-122.680961', "Sawasdee Thai", "./img/sawasdeeThai.jpg");
 var theFryingScotsman = new Foodfinder("American","SW 9th & Alder", '45.520766', '-122.680722',"The Frying Scotsman", "./img/theFryingScotsman.jpg");
 var marcoPoloSandwiches = new Foodfinder("American","SW 9th & Washington",'45.520874', '-122.680625', "Marco Polo's Sandwiches", "./img/marcoPoloSandwiches.jpg");
@@ -93,62 +110,67 @@ var directory = [chezDodo, dumpTruck, caribbeanKitchen, kingslandKitchen, laJaro
 // UI Logic
 $(document).ready(function(){
  $(".btn").click(function(event){
-      event.preventDefault();
-      var userInput = $("#foodType").val();
-      var randomSelection = randomFoodCart(userInput);
-      $('.name').html(randomSelection.truck);
-      $('.image').html('<img src='+ randomSelection.img +'  alt="restaurant" style="width:304px;height:228px;">');
-      $('.address').html(randomSelection.location);
-      function myMap() {
-        var mapCanvas = document.getElementById("map");
-        var myCenter = new google.maps.LatLng(randomSelection.lat,randomSelection.long);
-        var mapOptions = {center: myCenter, zoom: 20};
-        var map = new google.maps.Map(mapCanvas,mapOptions);
-        var marker = new google.maps.Marker({
-          position: myCenter,
-          animation: google.maps.Animation.BOUNCE
-        });
-        marker.setMap(map);
-      }
-      myMap();
-      $("#myModal").modal("show")
-      $('#myModal').on('shown.bs.modal', function () {
-          google.maps.event.trigger(map, "resize");
+
+    event.preventDefault();
+    var userInput = $("#foodType").val();
+    var randomSelection = randomFoodCart(userInput);
+    $('.names').html(randomSelection.truck);
+    $('.image').html('<img src='+ randomSelection.img +'  alt="restaurant" style="width:304px;height:228px;">');
+    $('.address').html(randomSelection.location);
+    function myMap() {
+      var mapCanvas = document.getElementById("map");
+      var myCenter = new google.maps.LatLng(randomSelection.lat,randomSelection.long);
+      var mapOptions = {center: myCenter, zoom: 20};
+      var map = new google.maps.Map(mapCanvas,mapOptions);
+      var image ='http://maps.google.com/mapfiles/ms/micons/snack_bar.png';
+      var marker = new google.maps.Marker({
+        position: myCenter,
+        animation: google.maps.Animation.DROP,
+        icon: image
       });
+      marker.setMap(map);
+    }
+    myMap();
+    $("#myModal").modal("show")
+    $('#myModal').on('shown.bs.modal', function () {
+        google.maps.event.trigger(map, "resize");
     });
-    $("#check-list").click(function(event) {
-      event.preventDefault();
-      directory.forEach(function(object) {
-  $("#results2").append('<div class="panel container" id="list"><div class="panel-header"></div><div class="panel-body"><div class="row container"><div class="col-xs-8"><p id="directoryList">' + '<img src='+ object.img +' alt="restaurant" class="picture">' + "&nbsp" + '<strong>' + object.truck + '</strong>' + "&nbsp" + object.location + '</p></div></div></div></div>');
-});
-      function initMap() {
+  });
+  $(".checky").click(function(event) {
+    event.preventDefault();
+    $("#results2").empty();
+    var buttonInput = $(this).val();
+    var listPick = listSelector(buttonInput);
+    console.log(listPick);
+    listPick.forEach(function(object) {
+    $("#results2").append('<div class="panel container" id="'+object.lat+'"><div class="panel-header"></div><div class="panel-body"><div class="row container"><div class="col directoryList">' + '<img src='+ object.img +' alt="restaurant" class="picture">' + "&nbsp" + '<strong>' + object.truck + '</strong>' + "&nbsp" + object.location + '</p></div></div></div></div>');
+    });
+    function initMap() {
       var mapCanvas = document.getElementById('results1');
       var mapOptions = {center: new google.maps.LatLng(45.520645, -122.677189), zoom:17 };
     	var map = new google.maps.Map(mapCanvas, mapOptions);
-
     	var infowindow = new google.maps.InfoWindow({});
-
     	var marker;
-
-    	for (var i = 0; i < directory.length; i++) {
+    	for (var i = 0; i < listPick.length; i++) {
     		marker = new google.maps.Marker({
-    			position: new google.maps.LatLng(directory[i].lat, directory[i].long),
+    			position: new google.maps.LatLng(listPick[i].lat, listPick[i].long),
     			map: map
     		});
-
-    		google.maps.event.addListener(marker, 'click', (function (marker, i) {
-    			return function () {
-    				infowindow.setContent(directory[i].truck);
-    				infowindow.open(map, marker);
-    			}
-    		})(marker, i));
+  		  google.maps.event.addListener(marker, 'click', (function (marker, i) {
+  			  return function () {
+  			  infowindow.setContent('<a href="#'+listPick[i].lat+'">'+listPick[i].truck+'</a>');
+  			  infowindow.open(map, marker);
+  			  }
+  		  })(marker, i));
     	}
     }
-      initMap();
-
-      $("#main").hide();
-      $("#results1").show();
-      $("#results2").show();
+    initMap();
+    $("#main").hide();
+    $('#check-list').on('click', function () {
       google.maps.event.trigger(map, "resize");
     });
+    $("#results1").show();
+    $("#results2").show();
+    $(".icons").show();
+  });
 });

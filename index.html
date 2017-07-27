@@ -16,7 +16,7 @@
         </div>
         <div class="col-md-6" id="contact">
           <h3>Want your food to be featured?
-            <button type="button" class="btn-unique" name="button"><a href="contact.html">Contact us</a></button></h3>
+          <button type="button" class="btn-unique" name="button"><a href="contact.html">Contact us</a></button></h3>
         </div>
       </div>
     </div>
@@ -34,7 +34,26 @@
         </div>
       </form>
       <div>
-        <button type="button" name="button" class="btn-success btn-lg" id="check-list">Check our list</button>
+        <button type="button" name="button" class="btn-success btn-lg checky" id="check-list" value="all">Check our list</button>
+      </div>
+    </div>
+    <div class="container out" id="results">
+      <div class="row">
+        <div class="col-md-8" id="results1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8" id="results2">
+        </div>
+      </div>
+      <div class="icons row">
+        <footer class="search well">
+          <button type="button" name="button"  class="checky" value="all"><img src="img/food.png" alt="All"></button>
+          <button type="button" name="button" value="American" class="checky"><img src="img/american.png" alt="American"></button>
+          <button type="button" name="button" value="Asian" class="checky"><img src="img/asian.png" alt="asian icon"></button>
+          <button type="button" name="button" value="Middle Eastern" class="checky"><img src="img/mediterranean.png" alt="Mediterranean"></button>
+          <button type="button" name="button" value="Mexican" class="checky"><img src="img/mexican.png" alt="Mexican"></button>
+        </footer>
       </div>
     </div>
 <!---->
@@ -56,35 +75,34 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 class="modal-title">RECOMMENDATION!</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">RECOMMENDATION!</h4>
           </div>
           <div class="modal-body">
             <div class="row row1 container">
               <div class="col-md-6">
                 <h1 class="cartName">Cart Name</h1>
-                <p class="name"></p>
+                <p class="names"></p>
               </div>
               <div class="col-md-6">
                 <h1 class="cartPic">Look for Us</h1>
                 <div class="image"></div>
               </div>
             </div>
-          <div class="row row2 container">
-            <div class="col-md-6">
-              <h1 class="cartMap">Location</h1>
-              <div id="map" style="width:304px;height:228px;"></div>
-            </div>
-            <div class="col-md-6">
-              <h1 class="cartAddress">Address</h1>
-              <p class="address"></p>
+            <div class="row row2 container">
+              <div class="col-md-6">
+                <h1 class="cartMap">Location</h1>
+                <div id="map" style="width:304px;height:228px;"></div>
+              </div>
+              <div class="col-md-6">
+                <h1 class="cartAddress">Address</h1>
+                <p class="address"></p>
+              </div>
             </div>
           </div>
-        </div>
           <div class="modal-footer">
-              <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-
-              <button type="button" class="btn btn-success">Next</button>
+            <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">Next</button>
 
           </div>
         </div>
