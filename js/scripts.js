@@ -68,7 +68,7 @@ var wagsyHotBeef = new Foodfinder("American","SW 5th And Oak St", '45.521314', '
 var khobKhun = new Foodfinder("Asian","SW 5th Ave & Stark St",'45.521048', '-122.676142', "Khob Khun", "./img/khobKhun.png");
 var pretzelBakery = new Foodfinder("American","SW 5th Ave", '45.521153', '-122.676157', "Portland Pretzel Bakery", "./img/missing-photo.png");
 var shawarmaStar = new Foodfinder("Middle Eastern","324 SW 5th Ave", '45.521242', '-122.676112', "Shawarma Star", "./img/missing-photo.png");
-var banMi = new Foodfinder("Asian","324 SW 5th Ave", '45.520795', '-122.676225', "Condenz Banh Mi", "./img/condenz.jpg");
+var banMi = new Foodfinder("Asian","324 SW 5th Ave", '45.520795', '-122.676225', "Condenz Banh Mi", "./img/missing-photo.png");
 var moonlightMediterranean = new Foodfinder("Middle Eastern","232 SW Stark Ave", '45.520182','-122.674344',  "Moonlight Mediterranean Food", "./img/moonlightMediterranean.jpg");
 var mamaChowsKitchen = new Foodfinder("Asian", "300 SW 2nd Ave", '45.520244','-122.673548', "Mama Chow's Kitchen", "./img/mamaChowsKitchen.jpg");
 var donJalapeno = new Foodfinder("Mexican", "421 SW 3rd Ave", '45.519927','-122.674522', "Don Jalapeno", "./img/donJalapeno.jpg");
@@ -112,5 +112,16 @@ $(document).ready(function(){
       }
       myMap();
       $("#myModal").modal("show")
+      $('#myModal').on('shown.bs.modal', function () {
+          google.maps.event.trigger(map, "resize");
+      });
+    });
+    $("#check-list").click(function(event) {
+      event.preventDefault();
+      directory.forEach(function(object) {
+        $("#results").append('<div class="panel container" id="list"><div class="panel-header"></div><div class="panel-body"><div class="row container"><div class="col-xs-6"><p id="directoryList">' + '<img src='+ object.img +' alt="restaurant" class="picture">' + "&nbsp" + '<strong>' + object.truck + '</strong>' + "&nbsp" + object.location + '</p></div></div></div></div>');
+      });
+      $("#main").hide();
+      $("#results").show();
     });
 });

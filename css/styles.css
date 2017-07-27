@@ -127,22 +127,34 @@ input[type="email"]{
   border-radius: 10px;
 }
 
-.list {
-  color: white;
-  background-image: url('../img/listBackground.jpg');
-  background-size: 100%;
-  background-position-x: center;
-  background-position-y: center;
-  background-size:cover;
-  background-repeat: no-repeat;
-  height: 100%;
+#map{
+  width:304px;
+  height:228px;
 }
 
-#listPanel{
-  position:absolute;
-  top: 40%;
-  left: 17%;
-  width: 100%;
+#results{
+  display: none;
 }
 
+.image{
+  width: 304px;
+  height: 228px;
+}
 
+.picture{
+  width: 100px;
+  height: 100px;
+}
+
+#directoryList{
+  height: 100px;
+  background-color: orange;
+  color: #000;
+  font-size: 22px;
+}
+
+.out{
+  position: inherit;
+  left: 25%;
+  right: 30%;
+}
