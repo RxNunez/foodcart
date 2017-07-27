@@ -110,6 +110,7 @@ var directory = [chezDodo, dumpTruck, caribbeanKitchen, kingslandKitchen, laJaro
 // UI Logic
 $(document).ready(function(){
  $(".btn").click(function(event){
+
     event.preventDefault();
     var userInput = $("#foodType").val();
     var randomSelection = randomFoodCart(userInput);
@@ -148,11 +149,8 @@ $(document).ready(function(){
       var mapCanvas = document.getElementById('results1');
       var mapOptions = {center: new google.maps.LatLng(45.520645, -122.677189), zoom:17 };
     	var map = new google.maps.Map(mapCanvas, mapOptions);
-
     	var infowindow = new google.maps.InfoWindow({});
-
     	var marker;
-
     	for (var i = 0; i < listPick.length; i++) {
     		marker = new google.maps.Marker({
     			position: new google.maps.LatLng(listPick[i].lat, listPick[i].long),
@@ -167,7 +165,6 @@ $(document).ready(function(){
     	}
     }
     initMap();
-
     $("#main").hide();
     $('#check-list').on('click', function () {
       google.maps.event.trigger(map, "resize");
