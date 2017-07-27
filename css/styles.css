@@ -177,3 +177,9 @@ input[type="email"]{
   position: absolute;
   left: 33%;
 }
+.names {
+  font-size: 18pt;
+}
+.address {
+  font-size: 18pt;
+}
