@@ -119,7 +119,7 @@ $(document).ready(function(){
     $("#check-list").click(function(event) {
       event.preventDefault();
       directory.forEach(function(object) {
-  $("#results2").append('<div class="panel container" id="list"><div class="panel-header"></div><div class="panel-body"><div class="row container"><div class="col-xs-8"><p id="directoryList">' + '<img src='+ object.img +' alt="restaurant" class="picture">' + "&nbsp" + '<strong>' + object.truck + '</strong>' + "&nbsp" + object.location + '</p></div></div></div></div>');
+  $("#results2").append('<div class="panel container" id="'+object.lat+'"><div class="panel-header"></div><div class="panel-body"><div class="row container"><div class="col directoryList">' + '<img src='+ object.img +' alt="restaurant" class="picture">' + "&nbsp" + '<strong>' + object.truck + '</strong>' + "&nbsp" + object.location + '</p></div></div></div></div>');
 });
       function initMap() {
       var mapCanvas = document.getElementById('results1');
@@ -138,7 +138,7 @@ $(document).ready(function(){
 
     		google.maps.event.addListener(marker, 'click', (function (marker, i) {
     			return function () {
-    				infowindow.setContent(directory[i].truck);
+    				infowindow.setContent('<a href="#'+directory[i].lat+'">'+directory[i].truck+'</a>');
     				infowindow.open(map, marker);
     			}
     		})(marker, i));
@@ -147,8 +147,8 @@ $(document).ready(function(){
       initMap();
 
       $("#main").hide();
+      google.maps.event.trigger(map, "resize");
       $("#results1").show();
       $("#results2").show();
-      google.maps.event.trigger(map, "resize");
     });
 });
