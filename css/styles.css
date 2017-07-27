@@ -91,11 +91,6 @@ a:hover {
   background: black;
   color: #5cb85c;
   font-size: 26px;
-  text-shadow:
-    -2px -2px 0 #000,
-    2px -2px 0 #000,
-    -2px 2px 0 #000,
-    2px 2px 0 #000;
   font-style: italic;
 }
 
@@ -151,10 +146,14 @@ input[type="email"]{
   background-color: orange;
   color: #000;
   font-size: 22px;
+  margin-right: -60%;
+  margin-left: -5%;
 }
 
-.out{
-  position: inherit;
-  left: 25%;
-  right: 30%;
+#results1{
+  border-style: solid;
+  border-color: blue;
+  border-width: thick;
+
+
 }

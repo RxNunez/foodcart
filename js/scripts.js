@@ -97,7 +97,7 @@ $(document).ready(function(){
       var userInput = $("#foodType").val();
       var randomSelection = randomFoodCart(userInput);
       $('.name').html(randomSelection.truck);
-      $('.image').html('<img src='+ randomSelection.img +'  alt="restaurant" style="width:304px;height:228px;">');
+      $('.image').html('<img src='+ randomSelection.img +'  alt="restaurant" class="image">');
       $('.address').html(randomSelection.location);
       function myMap() {
         var mapCanvas = document.getElementById("map");
@@ -119,7 +119,7 @@ $(document).ready(function(){
     $("#check-list").click(function(event) {
       event.preventDefault();
       directory.forEach(function(object) {
-        $("#results").append('<div class="panel container" id="list"><div class="panel-header"></div><div class="panel-body"><div class="row container"><div class="col-xs-6"><p id="directoryList">' + '<img src='+ object.img +' alt="restaurant" class="picture">' + "&nbsp" + '<strong>' + object.truck + '</strong>' + "&nbsp" + object.location + '</p></div></div></div></div>');
+        $("#results1").append('<div class="panel container" id="list"><div class="panel-header"></div><div class="panel-body"><div class="row container"><div class="col-xs-8"><p id="directoryList">' + '<img src='+ object.img +' alt="restaurant" class="picture">' + "&nbsp" + '<strong>' + object.truck + '</strong>' + "&nbsp" + object.location + '</p></div></div></div></div>');
       });
       $("#main").hide();
       $("#results").show();
