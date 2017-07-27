@@ -7,11 +7,9 @@ function Foodfinder(type, location, lat, long, truck, image) {
   this.truck = truck;
   this.img = image;
 }
-
 function randomNumberGenerator(length) {
     return Math.floor(Math.random() * (length));
 }
-
 function randomFoodCart(input) {
   if (input === "random") {
     var numberRan = randomNumberGenerator(directory.length);
@@ -26,7 +24,6 @@ function randomFoodCart(input) {
     return selected[numberRan];
   }
 }
-
 function listSelector(input) {
   var selected=[];
   if(input === "all"){
@@ -40,7 +37,6 @@ function listSelector(input) {
   return selected;
  }
 }
-
 var smallPharaoh = new Foodfinder("Middle Eastern","1900 SW 4th Ave",'45.520772', '-122.676335', "Small Pharaoh", "./img/smallPharaoh.jpg");
 var dumpTruck = new Foodfinder("Asian","1071 SW Alder St",'45.520949', '-122.682212', "The Dump Truck", "./img/dumpTruck.jpg");
 var laPinataTakos = new Foodfinder("Mexican", "SW 3rd & Ash",'45.5221111', '-122.6731111', "La Pinata Takos", "./img/laPinataTakos.jpg");
@@ -110,7 +106,6 @@ var directory = [chezDodo, dumpTruck, caribbeanKitchen, kingslandKitchen, laJaro
 // UI Logic
 $(document).ready(function(){
  $(".btn").click(function(event){
-
     event.preventDefault();
     var userInput = $("#foodType").val();
     var randomSelection = randomFoodCart(userInput);
