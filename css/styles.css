@@ -141,7 +141,6 @@ input[type="email"]{
 #results1 a {
   color: blue;
 }
-
 #results2{
   display: none;
   overflow:scroll;
@@ -170,6 +169,7 @@ input[type="email"]{
   margin-right: -60%;
   margin-left: -5%;
 }
+
 .icons {
   display: none;
 }
@@ -182,29 +182,4 @@ input[type="email"]{
 }
 .address {
   font-size: 18pt;
-
-.image{
-  width: 304px;
-  height: 228px;
-}
-
-.picture{
-  width: 100px;
-  height: 100px;
-}
-
-#directoryList{
-  height: 100px;
-  background-color: orange;
-  color: #000;
-  font-size: 22px;
-  margin-right: -60%;
-  margin-left: -5%;
-}
-
-.out{
-  position: inherit;
-  left: 25%;
-  right: 30%;
-
 }
